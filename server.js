@@ -8,12 +8,12 @@ const path = require("path")
 app.use(express.static(path.join(__dirname, 'public')))
 
 const products = [
-    { id: 1, name: "Wireless Mouse", price: 14.99, category: "accessories", stock: 25 },
-    { id: 2, name: "Mechanical Keyboard", price: 59.5, category: "accessories", stock: 8 },
-    { id: 3, name: "USB-C Hub", price: 24, category: "accessories", stock: 0 },
-    { id: 4, name: "24-inch Monitor", price: 119.99, category: "displays", stock: 5 },
-    { id: 5, name: "Laptop Stand", price: 22.5, category: "accessories", stock: 14 },
-    { id: 6, name: "Webcam HD", price: 39.99, category: "video", stock: 0 },
+    { id: 1, name: "Bread", price: 4.99, category: "food", stock: 50, image: "/images/bread.png" },
+    { id: 2, name: "Cheese", price: 55.5, category: "food", stock: 9, image: "/public/images/cheese.png" },
+    { id: 3, name: "Orange", price: 2.99, category: "food", stock: 5, image: "/public/images/orange.jpg" },
+    { id: 4, name: "Apple Juice", price: 79.99, category: "drink", stock: 0, image: "" },
+    { id: 5, name: "Chocolate Bar", price: 9.99, category: "food", stock: 21, image: "" },
+    { id: 6, name: "Energy Drink", price: 39.99, category: "drink", stock: 0, image: "" },
 ];
 
 /**

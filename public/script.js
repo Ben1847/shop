@@ -1,6 +1,6 @@
 async function getProducts(){
     const address = `http://localhost:3000/api/products`; // Gets products
-    const response = await fetch(address); // contacts the links server and gets the repositories from the page
+    const response = await fetch(address); // contacts the links server and gets the products from the page
     if (!response.ok) { // if its false and fails
     throw new Error(`Request failed with status ${response.status}`); // Creates an error and stops the execution
     }
@@ -15,8 +15,21 @@ function showProducts(products){
         return; // Exits the function
     }
     for (const product of products) { // It is a loop going through all the products in the array
+        console.log(product);
         const item = document.createElement("li") // This creates a new HTML list element
-        item.textContent = `${product.name} - £${product.price.toFixed(2)} - ${product.category} (${product.stock > 0 ? 'In stock' : 'Sold out'})`;
+        item.className = "product-card";
+
+        const image = document.createElement("img");
+        image.src = product.image;
+        image.alt = product.name;
+
+        const text = document.createElement("p");
+
+        text.textContent = `${product.name} - £${product.price.toFixed(2)} - ${product.category} (${product.stock > 0 ? 'In stock' : 'Sold out'})`;
+
+        item.append(image);
+        item.append(text);
+
         list.append(item); // Adds the list onto the webpage
     }
 }
