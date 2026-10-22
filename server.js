@@ -9,11 +9,11 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 const products = [
     { id: 1, name: "Bread", price: 4.99, category: "food", stock: 50, image: "/images/bread.png" },
-    { id: 2, name: "Cheese", price: 55.5, category: "food", stock: 9, image: "/public/images/cheese.png" },
-    { id: 3, name: "Orange", price: 2.99, category: "food", stock: 5, image: "/public/images/orange.jpg" },
-    { id: 4, name: "Apple Juice", price: 79.99, category: "drink", stock: 0, image: "" },
-    { id: 5, name: "Chocolate Bar", price: 9.99, category: "food", stock: 21, image: "" },
-    { id: 6, name: "Energy Drink", price: 39.99, category: "drink", stock: 0, image: "" },
+    { id: 2, name: "Cheese", price: 55.5, category: "food", stock: 9, image: "/images/cheese.png" },
+    { id: 3, name: "Orange", price: 2.99, category: "food", stock: 5, image: "/images/orange.png" },
+    { id: 4, name: "Apple Juice", price: 79.99, category: "drink", stock: 0, image: "/images/apple juice.png" },
+    { id: 5, name: "Chocolate Bar", price: 9.99, category: "food", stock: 21, image: "/images/chocolate bar.png" },
+    { id: 6, name: "Energy Drink", price: 39.99, category: "drink", stock: 0, image: "/images/energy drink.png" },
 ];
 
 /**
