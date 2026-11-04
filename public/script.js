@@ -19,17 +19,14 @@ function showProducts(products){
         const item = document.createElement("li") // This creates a new HTML list element
         item.className = "product-card";
 
-        const image = document.createElement("img");
-        image.src = product.image;
-        image.alt = product.name;
-
-        const text = document.createElement("p");
-
-        text.textContent = `${product.name} - £${product.price.toFixed(2)} - ${product.category} (${product.stock > 0 ? 'In stock' : 'Sold out'})`;
-
-        item.append(image);
-        item.append(text);
-
+        item.innerHTML = `<img src="${product.image}" alt="${product.name}">
+                          <h2>${product.name}</h2>
+                          <p class="product-price">£${product.price.toFixed(2)}</p>
+                          <p>Category: ${product.category}</p>
+                          <p class="product-stock">
+                          ${product.stock > 0 ? "In stock" : "Sold out"}
+                          </p>`;
+                          
         list.append(item); // Adds the list onto the webpage
     }
 }

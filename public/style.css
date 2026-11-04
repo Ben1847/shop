@@ -18,5 +18,25 @@
     object-fit: contain;
     display: block;
 }
-body { font-family: Arial, sans-serif; max-width: 700px; margin: 2rem auto; padding: 0 1rem; }
-li { margin-bottom: .5rem; }
+.product-card h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product-stock {
+    margin-top: 10px;
+}
+body { 
+    font-family: Arial, sans-serif; 
+    max-width: 700px; 
+    margin: 2rem auto; 
+    padding: 0 1rem;
+}
+li { 
+    margin-bottom: .5rem;
+}
