@@ -30,6 +30,25 @@ function showProducts(products){
         list.append(item); // Adds the list onto the webpage
     }
 }
+async function getProducts(category = '', sort = '') {
+    const params = new URLSearchParams();
+    if (category) params.set('category', category);
+    if (sort) params.set('sort', sort);
+    const response = await fetch(`/api/products?${params}`);
+    if (!response.ok) {
+        throw new Error(`Request failed: ${response.status}`);
+    }
+    return response.json();
+}
+async function refresh() {
+    const category = document.getElementById('categoryFilter').value;
+    const sort = document.getElementById('sortFilter').value;
+    showProducts(await getProducts(category, sort));
+    }
+    document.getElementById('categoryFilter')
+    .addEventListener('change', refresh);
+    document.getElementById('sortFilter')
+    .addEventListener('change', refresh);
 
 async function init(){
     try{ // try to run the code
